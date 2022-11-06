@@ -9,7 +9,7 @@ import { Button } from "../components/Button";
 export function New() {
   return (
     <VStack flex={1} bgColor="gray.900">
-      <Header title="Create new pool" />
+      <Header title="Crie um novo bolão" />
       <VStack mt={8} mx={5} alignItems="center">
         <Logo />
         <Heading fontFamily="heading" color="white" fontSize="xl" my={8} textAlign="center">
