@@ -7,7 +7,7 @@ import { Button } from '../components/Button'
 
 
 export function Signin() {
-  const { signIn, user} = useAuth()
+  const { signIn, isUserLoading} = useAuth()
   const googleIcon = <Icon as={Fontisto} name="google" color="white" size="md" />
   return (
     <Center flex="1" bgColor="gray.900" p={7}>
@@ -18,6 +18,10 @@ export function Signin() {
         leftIcon={googleIcon}
         mt={12}
         onPress={signIn}
+        isLoading={isUserLoading}
+        _loading={{
+          _spinner: { color: 'white'}
+        }}
       />
       <Text color="white" textAlign="center" mt={4}>
         Não utilizamos nenhuma informação sua além {'\n'} do e-mail para a criação de sua conta.
